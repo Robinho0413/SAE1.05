@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav"></nav>
+    <template id="nav-template">
+        <h1 class="nav__title">{{nav_title}}</h1>
+        <ul class="nav__list">
+            {{nav_list}}
+        </ul>
+        <ul class="nav__btn">
+            <button class="nav__btn-login">{{nav_button1}}</button>
+            <button class="nav__btn-signUp">{{nav_button2}}</button>
+        </ul>            
+    </template>
+    
+    <template id="navMenu-template">
+        <li class="nav__item"><a class="nav__link" href="">{{navMenu_name}}</a></li>
+    </template>
+
+    <header class="header"></header>
+    <template id="header-template">
+        <div class="header__content">
+            <h1 class="header__content-title">{{header_title}}</h1>
+            <video class="header__content-video" controls width="100%">       
+                <source class="header__video-sky" src="{{header_url}}" type="video/mp4">       
+            </video>
+        </div>
+    </template>
+
+    <section class="contents"></section>
+    <template id="content-template">
+        <div class="contents__text">
+            <p class="contents__text1">{{content_title}}</p>
+            <h1 class="contents__text2">{{content_desc}}</h1>
+        </div>
+        <div class="contents__img">
+            <ul class="contents__img-list">
+                {{content_logoList}}
+            </ul>
+        </div>       
+    </template>
+
+    <template id="contentLogo-template">
+        <img src="{{content_logoUrl}}" alt="{{content_logoName}}">
+    </template>
+
+    <section class="features"></section>
+    <template id="feature-template">
+        <div class="features__text">
+            <h1 class="features__text-title">{{feature_title}}</h1>
+            <p class="features__text-desc">{{feature_desc}}</p>
+        </div>
+        <div class="features__button">
+            <button class="features__button-download">{{feature_button1}}</button>
+            <button class="features__button-learn">{{feature_button2}}</button>
+        </div>
+        <img class="features__image-paysage" src="{{feature_url}}" alt="">
+        
+    </template>
+
+    <section class="form"></section>
+    <template id="forms-template">
+        <div class="form__square">
+            <h1 class="form__title">{{forms_title}}</h1>
+            <div class="form__info">
+                <input class="form__info-email" type="text" placeholder="{{forms_email}}"/>
+                <input class="form__info-passwd" type="password" placeholder="{{forms_password}}"/>
+            </div>
+            <p class="form__askPasswd">{{forms_optPasswd}}</p>
+            <button class="form__button">{{forms_button}}</button>
+            <div class="form__more">
+                <p class="form__askAccount">{{forms_optAcc1}}</p>
+                <p class="form__signUp">{{forms_optAcc2}}</p>
+            </div>
+        </div>
+    </template>
+
+    <section class="testimonial"></section>
+    <template id="testimonial-template">
+        <div class="testimonial__desc">
+            <img class="testimonial__desc-img" src="assets/quote.png" alt="quote">
+            <p class="testimonial__desc-text">{{testimonial_text}}</p>
+        </div>
+        <figure class="testimonial__profil">
+            <img class="testimonial__profil-img" src="{{testimonial_profilUrl}}" alt="profil Photo">
+            <p class="testimonial__profil-name">{{testimonial_profilName}}</p>
+            <p class="testimonial__profil-work">{{testimonial_profilWork}}</p>
+        </figure>
+    </template>
+
+    <section class="callToAction"></section>
+    <template id="callToAction-template">
+        <div class="callToAction__contents">  
+            <h1 class="callToAction__contents-title">{{callToAction_title}}</h1>
+            <p class="callToAction__contents-desc">{{callToAction_desc}}</p>
+            <div class="callToAction__contents-btn">
+                <button class="callToAction__btn-start">{{callToAction_btn1}}</button>
+                <button class="callToAction__btn-learn">{{callToAction_btn2}}</button>
+            </div>
+        </div> 
+    </template>
+
+    <section class="showcase"></section>
+    <template id="showcase-template">
+        <div class="showcase__contents">
+            <div class="showcase__contents-text">
+                <h1 class="showcase__contents-title">{{showcase_title}}</h1>
+                <p class="showcase__contents-desc">{{showcase_desc}}</p>
+            </div>
+            <ul class="showcase__contents-images">
+                {{showcase_imageList}}
+            </ul>
+            <button class="showcase__contents-btn">{{showcase_button}}</button>
+        </div>
+        
+    </template>
+
+    <template id="showcaseImage-template">
+        <li><img class="showcase__column-img" src="{{showcase_imageUrl}}" alt="{{showcase_imageName}}"></li>
+    </template>
+
+    <section class="team"></section>
+    <template id="team-template">
+        <div class="team__contents">
+            <div class="team__contents-images">
+                <ul class="team__contents-imgGrp">
+                    {{team_imageList}}
+                </ul>
+                <div class="team__contents-imgPoint">
+                    <img class="team__imgPoint-image" src="{{team_bigImageUrl}}" alt="{{team_bigImageName}}">
+                    <img class="team__contents-point" src="assets/Dotted Shape.svg" alt="point">
+                </div>
+            </div>
+            <div class="team__contents-text">
+                <p class="team__contents-intro">{{team_intro}}</h2>
+                <h1 class="team__contents-title">{{team_title}}</h1>
+                <div class="team__contents-text">
+                    {{team_text}}             
+                </div>
+                <button class="team__contents-btn">{{team_button}}</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="teamImage-template">
+        <li><img class="team__imgGrp-image" src="{{team_imageUrl}}" alt="{{team_imageName}}"></li>
+    </template>
+
+    <template id="teamText-template">
+        <p class="team__contents-desc">{{team_textDesc}}</p>
+    </template>
+
+    <section class="contact"></section>
+    <template id="contact-template">
+        <div class="contact__text">
+            <h1 class="contact__text-title">{{contact_title}}</h1>
+            <p class="contact__text-desc">{{contact_desc}}</p>
+        </div>
+        <div class="contact__info">
+            <div class="contact__info-left">
+                {{contact_optionList}}
+            </div>
+            <input class="contact__info-msg" type="text" placeholder="{{contact_optionMsg}}">
+        </div>
+        <button class="contact__btn">{{contact_button}}</button>
+    </template>
+
+    <template id="contactInput-template">
+        <input class="contact__info-id" type="text" placeholder="{{contact_optionName}}">
+    </template>
+
+    <section class="pricingTables"></section>
+    <template id="pricingTables-template">
+        <div class="pricingTables__text">
+            <p class="pricingTables__text-desc">{{pricingTables_desc}}</p>
+            <h1 class="pricingTables__text-title">{{pricingTables_title}}</h1>
+        </div>
+        <ul class="pricingTables__list">
+            {{pricingTables_formuleList}}
+        </ul>
+    </template>
+    <template id="PricingTablesFormule-template">
+        <li class="pricingTables__item">
+            <div class="pricingTables__item-top">
+                <h1 class="pricingTables__top-title">{{pricingTables_forTitle}}</h1>
+                <p class="pricingTables__top-desc">{{pricingTables_forDesc}}</p>
+            </div>
+            <div class="pricingTables__item-round">
+                <img class="pricingTables__item-img" src="{{pricingTables_forImg}}" alt="">
+            </div>
+            <button class="pricingTables__item-btn">{{pricingTables_forBtn}}</button>
+            <div class="pricingTables__item-text">
+                <p>{{pricingTables_forLine1}}</p>
+                <p>{{pricingTables_forLine2}}</p>
+                <p>{{pricingTables_forLine3}}</p>
+                <p>{{pricingTables_forLine4}}</p>
+            </div>
+        </li>
+    </template>
+
+    <footer class="footer"></footer>
+    <template id="footer-template">
+        <div class="footer__contents">
+            <div class="footer__contents-copyright">
+                <h1 class="footer-copyright-title">{{footer_title}}</h1>
+                <p class="footer__copyright-desc">{{footer_desc}}</p>
+                <div class="footer__copyright-fill">
+                    <input class="footer__fill-input" type="text" placeholder="{{footer_optionSub}}">
+                    <button class="footer__fill-btn">{{footer_buttonSub}}</button>
+                </div>
+                <div class="footer__contents-read">
+                    {{footer_readList}}
+                </div>
+            </div>
+            <div class="footer__contents-menu">
+                <p class="footer__menu-title">{{footer_menuTitle1}}</p>
+                <ul class="footer__menu-list">
+                    {{footer_menu1List}}
+                </ul>
+            </div>
+            <div class="footer__contents-menu">
+                <p class="footer__menu-title">{{footer_menuTitle2}}</p>
+                <ul class="footer__menu-list">
+                    {{footer_menu2List}}
+                </ul>
+            </div>
+            <div class="footer__contents-interact">
+                <button class="footer__interact-btn">{{footer_buttonBuy}}</button>
+                <p class="footer__interact-text"><a class="footer__interacts-link" href="">{{footer_optionBuy}}</a></p>
+            </div>
+        </div>
+    </template>
+
+    <template id="footerRead-template">
+        <p><a class="footer__read-link" href="">{{footer_readName}}</a></p>
+    </template>
+    <template id="footerMenu1-template">
+        <li class="footer__list-item"><a class="footer__menu-link" href="">{{footer_Menu1Name}}</a></li>
+    </template>
+    <template id="footerMenu2-template">
+        <li class="footer__list-item"><a class="footer__menu-link" href="">{{footer_Menu2Name}}</a></li>
+    </template>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
